@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(assets/rainbow-bg.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container{
+    padding: 20px 70px; /* top,bottom left,right */
+    color: white;
+}
+
+.current{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-container{
+    font-weight: 100;
+}
+
+.date-container .time{
+    font-size: 70px;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+/* .date-container #month{
+    font-weight: 300;
+} */
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.current .others{
+    display: flex;
+    flex-direction: column;
+    font-weight: 100;
+}
+
+.current .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
