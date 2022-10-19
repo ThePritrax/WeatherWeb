@@ -184,10 +184,10 @@ body{
 
 }
 
-/* @media only screen and (max-width: 1400px){
+@media only screen and (max-width: 1400px){
     .future-forecast{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
     }
-} */
+}
