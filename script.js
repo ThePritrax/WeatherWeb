@@ -16,12 +16,13 @@ setInterval(() => {
     const month = time.getMonth();
     const date = time.getDate();
     const day = time.getDay();
-    const hours24 = time.getHours();
-    const hours12 = hours24 >= 13 ? hours24 %12: hours24
-    const ampm = hours24 >=12 ? 'PM' : 'AM'
+    const hour = time.getHours();
+    const hoursIn12HrFormat = hour >= 13 ? hour %12: hour
     const minutes = time.getMinutes();
+    const ampm = hour >=12 ? 'PM' : 'AM'
 
-    timeEl.innerHTML = (hours12 < 10? '0'+hours12 : hours12) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
+    timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
+
     dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
 }, 1000);
 
@@ -42,7 +43,7 @@ function showWeatherData(data){
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
 
     timezoneEl.innerHTML = data.timezone;
-    countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
+    countryEl.innerHTML = data.lat + ' N ' + data.lon+' E'
 
     currentWeatherItemsEl.innerHTML = 
     `<div class="weather-item">
